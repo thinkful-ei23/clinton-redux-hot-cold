@@ -9,6 +9,8 @@ const initialState = {
 
 export const gameReducer = (state = initialState, action) => {
   if (action.type === actions.RESTART_GAME) {
+    document.title = 'Hot or Cold';
+
     return Object.assign({}, state, {
       guesses: [],
       feedback: 'Make your guess!',
